@@ -163,3 +163,98 @@ $("#disabledLink").click(function (ev) {
     ev.preventDefault();
 });
 
+
+
+document.addEventListener("DOMContentLoaded", function () {
+    const elements = document.querySelectorAll(".hidden");
+
+    function checkVisibility() {
+        elements.forEach(el => {
+            const rect = el.getBoundingClientRect();
+            if (rect.top < window.innerHeight * 0.85 && rect.bottom > 0) {
+                el.classList.add("show");
+                el.classList.remove("hide");
+            } else {
+                el.classList.add("hide");
+                el.classList.remove("show");
+            }
+        });
+    }
+
+    window.addEventListener("scroll", checkVisibility);
+    checkVisibility();
+});
+
+document.addEventListener("DOMContentLoaded", function () {
+    const sections = document.querySelectorAll("section"); 
+    const navLinks = document.querySelectorAll(".navbar a"); 
+
+    function activateNav() {
+        let scrollY = window.scrollY;
+
+        sections.forEach((section) => {
+            const sectionTop = section.offsetTop - 100; 
+            const sectionHeight = section.offsetHeight;
+            const sectionId = section.getAttribute("id");
+
+            if (scrollY >= sectionTop && scrollY < sectionTop + sectionHeight) {
+                navLinks.forEach((link) => {
+                    link.classList.remove("active");
+                    if (link.getAttribute("href") === `#${sectionId}`) {
+                        link.classList.add("active");
+                    }
+                });
+            }
+        });
+    }
+
+    window.addEventListener("scroll", activateNav);
+});
+
+document.querySelector('form').addEventListener('submit', function(e) {
+    e.preventDefault(); // منع إرسال النموذج إذا كانت هناك أخطاء
+
+    let valid = true;
+
+    // التحقق من الحقل Name
+    const name = document.getElementById('name');
+    if (name.value.trim() === "") {
+        name.classList.add('error');
+        valid = false;
+    } else {
+        name.classList.remove('error');
+    }
+
+    // التحقق من الحقل Mobile
+    const mobile = document.getElementById('mobile');
+    const mobilePattern = /^[0-9]{10}$/; // رقم موبايل مكون من 10 أرقام
+    if (!mobilePattern.test(mobile.value)) {
+        mobile.classList.add('error');
+        valid = false;
+    } else {
+        mobile.classList.remove('error');
+    }
+
+    // التحقق من الحقل Number
+    const number = document.getElementById('number');
+    if (number.value < 1 || number.value > 15 || isNaN(number.value)) {
+        number.classList.add('error');
+        valid = false;
+    } else {
+        number.classList.remove('error');
+    }
+
+    // التحقق من الحقل Message
+    const message = document.getElementById('message');
+    if (message.value.trim() === "") {
+        message.classList.add('error');
+        valid = false;
+    } else {
+        message.classList.remove('error');
+    }
+
+    // إذا كانت كل الفاليديشين صحيحة، إرسال النموذج
+    if (valid) {
+        this.submit();
+    }
+});
