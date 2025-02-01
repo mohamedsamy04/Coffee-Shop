@@ -119,61 +119,206 @@
     </section>
     <!-- End About -->
 
-    <!-- Start Menu -->
-    <section class="menu" id="menu">
-        <h1 class="heading hidden">our menu <span>popular coffee</span></h1>
-        <div class="boxContainer">
-            <a href="javascript:void(0)" id="disabledLink" class="box hidden">
-                <img src="img/menu-1.png" alt="coffee 1">
-                <div class="content">
-                    <h3>our special coffee</h3>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas, veniam.</p>
-                    <span>$8.99</span>
-                </div>
-            </a>
-            <a href="javascript:void(0)" id="disabledLink" class="box hidden">
-                <img src="img/menu-2.png" alt="coffee 2">
-                <div class="content">
-                    <h3>our special coffee</h3>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas, veniam.</p>
-                    <span>$8.99</span>
-                </div>
-            </a>
-            <a href="javascript:void(0)" id="disabledLink" class="box hidden">
-                <img src="img/menu-3.png" alt="coffee 3">
-                <div class="content">
-                    <h3>our special coffee</h3>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas, veniam.</p>
-                    <span>$8.99</span>
-                </div>
-            </a>
-            <a href="javascript:void(0)" id="disabledLink" class="box hidden">
-                <img src="img/menu-4.png" alt="coffee 4">
-                <div class="content">
-                    <h3>our special coffee</h3>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas, veniam.</p>
-                    <span>$8.99</span>
-                </div>
-            </a>
-            <a href="javascript:void(0)" id="disabledLink" class="box hidden">
-                <img src="img/menu-5.png" alt="coffee 5">
-                <div class="content">
-                    <h3>our special coffee</h3>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas, veniam.</p>
-                    <span>$8.99</span>
-                </div>
-            </a>
-            <a href="javascript:void(0)" id="disabledLink" class="box hidden">
-                <img src="img/menu-6.png" alt="coffee 6">
-                <div class="content">
-                    <h3>our special coffee</h3>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas, veniam.</p>
-                    <span>$8.99</span>
-                </div>
-            </a>
-        </div>
-    </section>
-    <!-- End menu -->
+<!-- Start Menu -->
+<section class="menu" id="menu">
+    <h1 class="heading hidden">our menu <span>popular coffee</span></h1>
+    
+    <!-- Category Buttons -->
+    <div class="category-buttons hidden">
+        <button class="btn category-btn active" onclick="showCategory('coffee', this)">Coffee</button>
+        <button class="btn category-btn" onclick="showCategory('tea', this)">Tea</button>
+        <button class="btn category-btn" onclick="showCategory('desserts', this)">Desserts</button>
+        <button class="btn category-btn" onclick="showCategory('smoothies', this)">Smoothies</button>
+    </div>
+    
+    <!-- Menu Sections -->
+    <div class="boxContainer active hidden" id="coffee">
+        <a href="javascript:void(0)" class="box hidden">
+            <img src="img/menu-1.png" alt="coffee 1">
+            <div class="content">
+                <h3>Espresso</h3>
+                <p>Rich and bold espresso shot.</p>
+                <span>$5.99</span>
+            </div>
+        </a>
+        <a href="javascript:void(0)" class="box hidden">
+            <img src="img/menu-2.png" alt="coffee 2">
+            <div class="content">
+                <h3>Cappuccino</h3>
+                <p>Creamy and delicious.</p>
+                <span>$6.99</span>
+            </div>
+        </a>
+        <a href="javascript:void(0)" class="box hidden">
+            <img src="img/menu-1.png" alt="coffee 3">
+            <div class="content">
+                <h3>Latte</h3>
+                <p>Perfectly balanced espresso and milk.</p>
+                <span>$6.49</span>
+            </div>
+        </a>
+        <a href="javascript:void(0)" class="box hidden">
+            <img src="img/menu-2.png" alt="coffee 4">
+            <div class="content">
+                <h3>Americano</h3>
+                <p>Smooth and strong.</p>
+                <span>$4.99</span>
+            </div>
+        </a>
+    </div>
+    
+    <div class="boxContainer hidden" id="tea">
+        <a href="javascript:void(0)" class="box hidden">
+            <img src="img/menu-3.png" alt="tea 1">
+            <div class="content">
+                <h3>Green Tea</h3>
+                <p>Healthy and refreshing.</p>
+                <span>$4.99</span>
+            </div>
+        </a>
+        <a href="javascript:void(0)" class="box hidden">
+            <img src="img/menu-3.png" alt="tea 2">
+            <div class="content">
+                <h3>Black Tea</h3>
+                <p>Classic and bold.</p>
+                <span>$4.49</span>
+            </div>
+        </a>
+        <a href="javascript:void(0)" class="box hidden">
+            <img src="img/menu-3.png" alt="tea 3">
+            <div class="content">
+                <h3>Herbal Tea</h3>
+                <p>Soothing and aromatic.</p>
+                <span>$5.49</span>
+            </div>
+        </a>
+        <a href="javascript:void(0)" class="box hidden">
+            <img src="img/menu-3.png" alt="tea 4">
+            <div class="content">
+                <h3>Chai Latte</h3>
+                <p>Spiced and creamy.</p>
+                <span>$5.99</span>
+            </div>
+        </a>
+    </div>
+    
+    <div class="boxContainer hidden" id="desserts">
+        <a href="javascript:void(0)" class="box hidden">
+            <img src="img/menu-4.png" alt="dessert 1">
+            <div class="content">
+                <h3>Chocolate Cake</h3>
+                <p>Rich and moist.</p>
+                <span>$7.99</span>
+            </div>
+        </a>
+        <a href="javascript:void(0)" class="box hidden">
+            <img src="img/menu-4.png" alt="dessert 2">
+            <div class="content">
+                <h3>Cheesecake</h3>
+                <p>Creamy and delightful.</p>
+                <span>$6.99</span>
+            </div>
+        </a>
+        <a href="javascript:void(0)" class="box hidden">
+            <img src="img/menu-4.png" alt="dessert 3">
+            <div class="content">
+                <h3>Brownie</h3>
+                <p>Fudgy and delicious.</p>
+                <span>$5.99</span>
+            </div>
+        </a>
+        <a href="javascript:void(0)" class="box hidden">
+            <img src="img/menu-4.png" alt="dessert 4">
+            <div class="content">
+                <h3>Ice Cream</h3>
+                <p>Refreshing and sweet.</p>
+                <span>$4.99</span>
+            </div>
+        </a>
+    </div>
+    <div class="boxContainer hidden" id="smoothies"> 
+        <a href="javascript:void(0)" class="box hidden">
+            <img src="img/menu-5.png" alt="smoothie 1">
+            <div class="content">
+                <h3>Berry Blast</h3>
+                <p>Mixed berries with a touch of honey.</p>
+                <span>$6.99</span>
+            </div>
+        </a>
+        <a href="javascript:void(0)" class="box hidden">
+            <img src="img/menu-5.png" alt="smoothie 2">
+            <div class="content">
+                <h3>Tropical Delight</h3>
+                <p>Mango, pineapple, and coconut.</p>
+                <span>$7.49</span>
+            </div>
+        </a>
+        <a href="javascript:void(0)" class="box hidden">
+            <img src="img/menu-5.png" alt="smoothie 3">
+            <div class="content">
+                <h3>Green Goddess</h3>
+                <p>Spinach, kale, and green apple.</p>
+                <span>$6.49</span>
+            </div>
+        </a>
+        <a href="javascript:void(0)" class="box hidden">
+            <img src="img/menu-5.png" alt="smoothie 4">
+            <div class="content">
+                <h3>Peanut Butter Banana</h3>
+                <p>Peanut butter with banana and oats.</p>
+                <span>$7.99</span>
+            </div>
+        </a>
+    </div>
+</section>
+<!-- End Menu -->
+
+<script>
+    document.addEventListener("DOMContentLoaded", function() {
+
+        document.querySelectorAll('.boxContainer').forEach(container => {
+            if (!container.classList.contains('active')) {
+                container.style.display = 'none';
+            } else {
+                container.style.display = 'flex';
+                container.style.opacity = '1';
+                container.style.transform = 'translateY(0) scale(1)';
+            }
+        });
+    });
+
+    function showCategory(category, btn) {
+        let currentActive = document.querySelector('.boxContainer.active');
+
+        if (currentActive) {
+            currentActive.classList.remove('active');
+
+            setTimeout(() => {
+                currentActive.style.display = 'none';
+            }, 500); 
+        }
+
+        setTimeout(() => {
+            let newActive = document.getElementById(category);
+            newActive.style.display = 'flex';
+
+            requestAnimationFrame(() => {
+                newActive.classList.add('active');
+            });
+        }, currentActive ? 500 : 0);
+
+        document.querySelectorAll('.category-btn').forEach(button => {
+            button.classList.remove('active');
+        });
+        btn.classList.add('active');
+    }
+</script>
+
+
+
+
+
+
 
     <!-- Start Review -->
     <section class="review" id="review">

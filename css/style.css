@@ -1094,3 +1094,38 @@ Page Loader
 .book form .box.error:focus {
     border-color: #e74c3c;
 }
+
+.category-buttons {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+    margin-bottom: 2rem;
+}
+
+.category-btn {
+    padding: .9rem 1.5rem;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.category-btn.active {
+    background-color: #333;
+    color: #fff;
+    border: none;
+}
+
+.boxContainer {
+    flex-wrap: wrap;
+    display: none; 
+    padding: 1rem;
+    opacity: 0;
+    transform: translateY(30px) scale(0.95);
+    transition: opacity 0.5s ease-out, transform 0.5s ease-out;
+}
+
+.boxContainer.active {
+    display: flex; 
+    opacity: 1;
+    transform: translateY(0) scale(1);
+}
