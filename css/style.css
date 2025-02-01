@@ -900,19 +900,19 @@ background-position: center;
 }
 
 /* Start Footer */
-.footer .boxContainer {
+.footer .boxContainerf {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(23rem, 1fr));
     gap: 1.5rem;
 }
 
-.footer .boxContainer .box h3 {
+.footer .boxContainerf .boxf h3 {
     font-size: 2.5rem;
     padding: 1rem 0;
     color: var(--mainColor);
 }
 
-.footer .boxContainer .box a {
+.footer .boxContainerf .boxf a {
     display: block;
     font-size: 1.5rem;
     padding: 1rem 0;
@@ -920,15 +920,15 @@ background-position: center;
     word-break: break-all;
 }
 
-.footer .boxContainer .box a:hover {
+.footer .boxContainerf .boxf a:hover {
     color: var(--mainColorHover);
 }
 
-.footer .boxContainer .box a svg {
+.footer .boxContainerf .boxf a svg {
     margin-right: 1rem;
 }
 
-.footer .boxContainer .box a:hover svg {
+.footer .boxContainerf .boxf a:hover svg {
     margin-right: 1.7rem;
 }
 
@@ -1061,7 +1061,7 @@ background-position: center;
         line-height: 6rem;
     }
 
-    .footer .boxContainer {
+    .footer .boxContainerf {
         grid-template-columns: 1fr;
     }
 
@@ -1118,7 +1118,7 @@ background-position: center;
     border: none;
 }
 
-.boxContainer {
+.menu .boxContainer {
     flex-wrap: wrap;
     display: none; 
     padding: 1rem;
@@ -1127,7 +1127,7 @@ background-position: center;
     transition: opacity 0.5s ease-out, transform 0.5s ease-out;
 }
 
-.boxContainer.active {
+.menu .boxContainer.active {
     display: flex; 
     opacity: 1;
     transform: translateY(0) scale(1);
