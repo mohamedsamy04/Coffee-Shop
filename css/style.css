@@ -282,7 +282,7 @@ background-position: center;
 
 .coffee-maker .coffee {
     position: absolute;
-    background: var(--mainColorHover);
+    background: #776655;
     width: 200px;
     height: calc(200px/2);
     bottom: 0;
@@ -298,7 +298,7 @@ background-position: center;
     font-family: sans-serif;
     list-style: none;
     padding: 10px 0;
-    color: rgba(255, 255, 255, 0.6);
+    color: var(--mainColor);
 }
 
 .coffee-maker li {
@@ -314,7 +314,7 @@ background-position: center;
 }
 
 .coffee-maker .drip {
-    background: var(--mainColorHover);
+    background: #776655;
     width: calc(200px*0.1);
     height: calc(200px*0.1);
     border-radius: 100%;
